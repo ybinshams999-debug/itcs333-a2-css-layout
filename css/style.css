@@ -1,7 +1,121 @@
-/* ITCS333 A2 starter — implement the design spec from index.html here.
-   See README rubric for the graded checks. Do not use inline styles. */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #f5f6f8;
+}
 
-/* TODO: style #site-header (padding, border-bottom) */
-/* TODO: style .card (padding, border, gap) and .card-grid (display, gap, 3 columns) */
-/* TODO: style form inputs (padding) and a :focus state */
-/* TODO: add a @media (max-width: 700px) query collapsing .card-grid to one column */
+#site-header {
+  padding: 20px;
+  background: #1f3a5f;
+  color: #fff;
+  border-bottom: 4px solid #4a90d9;
+}
+
+#site-header h1 {
+  margin: 0 0 8px;
+}
+
+.main-nav a {
+  color: #fff;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.content-section {
+  margin-bottom: 32px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 16px;
+  border: 2px solid #d0d7e2;
+  border-radius: 8px;
+  margin: 8px;
+  background: #fff;
+}
+
+.card .weight {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.register-form label {
+  margin: 12px 0 4px;
+  font-weight: 600;
+}
+
+.register-form input {
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.register-form input:focus {
+  outline: 3px solid #4a90d9;
+  border-color: #1f3a5f;
+}
+
+.btn-primary {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #1f3a5f;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #4a90d9;
+}
+
+.site-footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
